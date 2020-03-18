@@ -1,0 +1,35 @@
+FE_type = Sire
+AFE.separate_vdw_elec = False
+mcs.match_by = spatially-closest
+
+[globals]
+forcefield = amber, ff14SB, tip3p
+gaff = gaff2
+logfile = dGmorph.log
+
+[ligand]
+basedir = poses
+file.name = ligand.mol2
+box.type = rectangular
+
+molecules = ndm_1, ndm_2, ndm_4, ndm_5, ndm_6, ndm_7, ndm_8, ndm_9, ndm_10, ndm_11, ndm_12, ndm_13, ndm_14, ndm_15, ndm_16
+
+box.type = rectangular
+box.length = 12.0
+neutralize = yes
+
+min.nsteps = 5000
+min.restr_force = 10.0
+min.restraint = notsolvent
+
+md.heat.nsteps = 2000
+md.heat.restr_force = 10.0
+md.heat.restraint = notsolvent
+
+md.constT.nsteps = 2000
+md.constT.restr_force = 10.0
+md.constT.restraint = notsolvent
+
+md.press.T = 298.0
+md.press.nsteps = 20000
+md.press.p = 1.0
