@@ -1,0 +1,6 @@
+source leaprc.gaff
+source leaprc.water.tip3p
+loadamberparams lig_11.frcmod
+test = loadmol2 lig_11_prep.mol2
+saveamberparm test lig_11.parm7 lig_11.rst7
+quit

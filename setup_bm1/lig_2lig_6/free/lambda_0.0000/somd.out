@@ -1,0 +1,52 @@
+Traceback (most recent call last):
+  File "/home/ppxasjsm/miniconda3/envs/bioSS/share/Sire/scripts/somd-freenrg.py", line 146, in <module>
+    OpenMMMD.runFreeNrg(params)
+  File "/home/ppxasjsm/miniconda3/envs/bioSS/lib/python3.7/site-packages/Sire/Tools/__init__.py", line 176, in inner
+    retval = func()
+  File "/home/ppxasjsm/miniconda3/envs/bioSS/lib/python3.7/site-packages/Sire/Tools/OpenMMMD.py", line 1679, in runFreeNrg
+    system = moves.move(system, nmoves.val, True)
+RuntimeError: Particle coordinate is nan
+s == 50
+ncycles_per_snap == 2
+nmoves == 10000
+platform == CUDA
+pressure == 1 atm
+reaction field dielectric == 78.3
+save coordinates == True
+temperature == 300 t
+thermostat == True
+timestep == 0.002 ps
+topfile == somd.prm7
+===============
+### Running Single Topology Molecular Dynamics Free Energy on unknown ###
+###================Setting up calculation=====================###
+New run. Loading input and creating restart
+lambda is 0.0
+Create the System...
+Selecting dummy groups
+Creating force fields... 
+Setting up the simulation with random seed 117483
+Setting up moves...
+Created a MD move that uses OpenMM for all molecules on 0 
+Generated random seed number 117483 
+Saving restart
+Setting up sim file. 
+There are 12157 atoms in the group 
+###===========================================================###
+
+###=======================Minimisation========================###
+Running minimisation.
+Energy before the minimisation: 19295.9 kcal mol-1
+Tolerance for minimisation: 1
+Maximum number of minimisation iterations: 1000
+Energy after the minimization: -48640.5 kcal mol-1
+Energy minimization done.
+###===========================================================###
+
+###====================somd-freenrg run=======================###
+Starting somd-freenrg run...
+10000 moves 50 cycles, 1000 ps simulation time
+
+Cycle =  1 
+
+Starting /home/ppxasjsm/miniconda3/envs/bioSS/bin/somd-freenrg: number of threads equals 20
