@@ -1,0 +1,178 @@
+
+          -------------------------------------------------------
+          Amber 16 SANDER                              2016
+          -------------------------------------------------------
+
+| Run on 03/20/2020 at 14:20:37
+
+|   Executable path: /Users/toni_brain/Software/amber16//bin/sander
+| Working directory: /Users/toni_brain/Projects/git/NDM_1_data/setup_bm1/min
+|          Hostname: Unknown
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: md.cfg                                                                
+| MDOUT: stdout                                                                
+|INPCRD: md.rst7                                                               
+|  PARM: md.prm7                                                               
+|RESTRT: md.crd                                                                
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: md.nrg                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Minimisation                                                                   
+ &cntrl                                                                        
+  imin=1,                                                                      
+  ntx=1,                                                                       
+  ntxo=1,                                                                      
+  ntpr=100,                                                                    
+  irest=0,                                                                     
+  maxcyc=10000,                                                                
+  ncyc=1000,                                                                   
+  cut=8.0,                                                                     
+ /                                                                             
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+ getting new box info from bottom of inpcrd
+|  INFO: Old style inpcrd file read
+
+| peek_ewald_inpcrd: Box info found
+|Largest sphere to fit in unit cell has radius =    25.000
+| New format PARM file being parsed.
+| Version =    1.000 Date = 03/20/20 Time = 14:20:37
+ NATOM  =   12149 NTYPES =      14 NBONH =    8089 MBONA  =      19
+ NTHETH =    4055 MTHETA =      29 NPHIH =      34 MPHIA  =      39
+ NHPARM =       0 NPARM  =       0 NNB   =   16296 NRES   =    4043
+ NBONA  =      19 NTHETA =      29 NPHIA =      39 NUMBND =      18
+ NUMANG =      27 NPTRA  =      15 NATYP =       0 NPHB   =       0
+ IFBOX  =       1 NMXRS  =      25 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real             1015246
+|     Hollerith          40492
+|     Integer           295273
+|     Max Pairs        4049666
+|     nblistReal        145788
+|     nblist Int        580861
+|       Total            28470 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+BioSimSpace Syst                                                                
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       1, ntpr    =     100, ntrx    =       1, ntwr    =       1
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       1, ntb     =       1, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =   8.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =   10000, ncyc    =    1000, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+
+Ewald parameters:
+     verbose =       0, ew_type =       0, nbflag  =       1, use_pme =       1
+     vdwmeth =       1, eedmeth =       1, netfrc  =       0
+     Box X =   50.000   Box Y =   50.000   Box Z =   50.000
+     Alpha =   90.000   Beta  =   90.000   Gamma =   90.000
+     NFFT1 =   50       NFFT2 =   50       NFFT3 =   50
+     Cutoff=    8.000   Tol   =0.100E-04
+     Ewald Coefficient =  0.34864
+     Interpolation order =    4
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+BioSimSpace Syst                                                                
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:        0
+
+     Sum of charges from parm topology file =  -0.00000001
+     Forcing neutrality...
+
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+ ---------------------------------------------------
+ APPROXIMATING switch and d/dx switch using CUBIC SPLINE INTERPOLATION
+ using   5000.0 points per unit in tabled values
+ TESTING RELATIVE ERROR over r ranging from 0.0 to cutoff
+| CHECK switch(x): max rel err =   0.2738E-14   at   2.422500
+| CHECK d/dx switch(x): max rel err =   0.8332E-11   at   2.782960
+ ---------------------------------------------------
+| Local SIZE OF NONBOND LIST =    2456346
+| TOTAL SIZE OF NONBOND LIST =    2456346
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1      -1.0217E+04     1.2223E+02     3.2151E+03     OW       6452
+
+ BOND    =     9084.1159  ANGLE   =     2286.6789  DIHED      =        4.2225
+ VDWAALS =    24515.0941  EEL     =   -45790.6666  HBOND      =        0.0000
+ 1-4 VDW =        7.9948  1-4 EEL =     -324.1925  RESTRAINT  =        0.0000
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    100      -4.4656E+04     1.3450E+00     1.0571E+02     C16        10
+
+ BOND    =     1223.9238  ANGLE   =      652.9604  DIHED      =        6.3760
+ VDWAALS =     6321.8553  EEL     =   -52540.5022  HBOND      =        0.0000
+ 1-4 VDW =        5.3041  1-4 EEL =     -326.3561  RESTRAINT  =        0.0000
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    200      -4.6079E+04     1.9255E+00     1.4699E+02     N18        11
+
+ BOND    =     1290.6855  ANGLE   =      683.4205  DIHED      =        6.3353
+ VDWAALS =     6474.5011  EEL     =   -54212.5349  HBOND      =        0.0000
+ 1-4 VDW =        5.3154  1-4 EEL =     -326.7933  RESTRAINT  =        0.0000
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    300      -4.6861E+04     1.5420E+00     1.4398E+02     N18        11
+
+ BOND    =     1328.5240  ANGLE   =      701.3617  DIHED      =        6.5251
+ VDWAALS =     6724.5618  EEL     =   -55300.7718  HBOND      =        0.0000
+ 1-4 VDW =        5.2900  1-4 EEL =     -326.6711  RESTRAINT  =        0.0000
