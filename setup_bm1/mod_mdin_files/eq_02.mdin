@@ -1,0 +1,11 @@
+Density equilibration without restraints in 250 ps
+&cntrl
+	imin= 0, irest=1, ntx=5,
+	ntpr=1000, ntwx=1000, ntwr=1000,
+        cut=10.0,
+	ntt=3, temp0=298,
+	gamma_ln=3.0, ntb=2, ntc=2, ntf=2,
+	nstlim=250000, ntp=1, taup=2.0, 
+	nmropt=0, iwrap=1, ioutfm=1,
+/
+
